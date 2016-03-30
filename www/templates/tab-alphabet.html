@@ -1,0 +1,13 @@
+<ion-view title="Abecedario">
+	<ion-content>
+		<div class="card" ng-repeat="letter in letters">
+			<a class="item item-icon-right" ng-click="opened = !opened">
+				<i ng-class="['icon', {'ion-ios-arrow-down' : !opened}, {'ion-ios-arrow-up': opened}]"></i>
+				{{letter.char}}
+			</a>
+			<div class="item item-image" ng-show="opened">
+				<img src="img/logo.png">
+			</div>
+		</div>
+  </ion-content>
+</ion-view>
