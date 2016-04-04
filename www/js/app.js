@@ -40,7 +40,17 @@ angular.module('en-senas', ['ionic'])
       url: '/situations',
       views: {
         'tab-situations': {
-          templateUrl: 'templates/tab-situations.html'
+          templateUrl: 'templates/tab-situations.html',
+          controller: 'SituationsCtrl'
+        }
+      }
+    })
+    .state('tab.situation-detail', {
+      url: '/situations/:id',
+      views: {
+        'tab-situations': {
+          templateUrl: 'templates/tab-situation-detail.html',
+          controller: 'SituationDetailCtrl'
         }
       }
     });

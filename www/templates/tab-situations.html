@@ -1,7 +1,15 @@
 <ion-view title="Situaciones">
 	<ion-content>
-    <div class="text-center padding">
-      
+    <div class="list">
+			<a class="item item-icon-left"
+			href="#/tab/situations/{{situation.id}}"
+			ng-repeat="situation in situations">
+			  <i class="icon fa {{situation.icon}}"></i>
+				<h2>{{situation.name}}</h2>
+				<p>
+					{{situation.description}}
+				</p>
+			</a>
     </div>
   </ion-content>
 </ion-view>

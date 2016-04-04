@@ -1,0 +1,21 @@
+<ion-view title="{{situation.name}}">
+	<ion-content>
+		<div class="card">
+			<div class="item item-image padding">
+				<i class="fa fa-4x {{situation.icon}}"></i>
+			</div>
+			<div class="item item-text-wrap text-center">
+				{{situation.description}}
+			</div>
+		</div>
+		<div class="list card">
+			<div class="item item-divider text-center">
+				Colección de Frases
+			</div>
+			<a href="#" class="item item-text-wrap"
+				ng-repeat="phrase in situation.phrases">
+				{{phrase.description}}
+			</a>
+		</div>
+  </ion-content>
+</ion-view>
