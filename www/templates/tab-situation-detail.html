@@ -12,9 +12,12 @@
 			<div class="item item-divider text-center">
 				Colección de Frases
 			</div>
-			<a href="#" class="item item-text-wrap"
-				ng-repeat="phrase in situation.phrases">
+			<a href="#/tab/situations/{{situation.id}}/phrase/{{phrase.id}}"
+			class="item item-text-wrap item-icon-right"
+				ng-repeat="phrase in situation.phrases"
+				ng-click="console.log({{phrase.id}});">
 				{{phrase.description}}
+				<i class="icon ion-ios-arrow-right"></i>
 			</a>
 		</div>
   </ion-content>

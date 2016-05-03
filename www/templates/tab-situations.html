@@ -1,7 +1,7 @@
 <ion-view title="Situaciones">
 	<ion-content>
     <div class="list">
-			<a class="item item-icon-left"
+			<a class="item item-icon-left item-icon-right"
 			href="#/tab/situations/{{situation.id}}"
 			ng-repeat="situation in situations">
 			  <i class="icon fa {{situation.icon}}"></i>
@@ -9,6 +9,7 @@
 				<p>
 					{{situation.description}}
 				</p>
+				<i class="icon ion-ios-arrow-right"></i>
 			</a>
     </div>
   </ion-content>

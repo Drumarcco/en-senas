@@ -2,7 +2,8 @@ angular.module('en-senas', ['ionic'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
-    if (window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {
+    if (window.cordova && window.cordova.plugins &&
+      window.cordova.plugins.Keyboard) {
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
       cordova.plugins.Keyboard.disableScroll(true);
     }
@@ -51,6 +52,15 @@ angular.module('en-senas', ['ionic'])
         'tab-situations': {
           templateUrl: 'templates/tab-situation-detail.html',
           controller: 'SituationDetailCtrl'
+        }
+      }
+    })
+    .state('tab.phrase-detail', {
+      url: '/situations/:situationId/phrase/:phraseId',
+      views: {
+        'tab-situations': {
+          templateUrl: 'templates/tab-phrase-detail.html',
+          controller: 'PhraseDetailCtrl'
         }
       }
     });
